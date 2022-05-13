@@ -3,11 +3,7 @@ void Mine::ChangePlayerMoney(Player& player, int value)
 {
     player.AddPlayerMoney(value);
 }
-void Mine::ChangePlayerPickaxe(Player& player, int value) 
-{
-    player.SetPlayerDamage(value);
-}
-    
+
 void Mine::PrintText(Player& player)
 {
     std::string letter;
