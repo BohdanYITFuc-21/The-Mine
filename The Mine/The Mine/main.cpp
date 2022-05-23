@@ -42,7 +42,7 @@ int main()
                 }
                 else if(answer == "3")
                 {
-                    shop.BalanceCheck(player);   
+                    shop.BalanceCheck(player);
                 }
                 else if(answer == "4")
                 {

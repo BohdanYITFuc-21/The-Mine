@@ -1,4 +1,6 @@
 ﻿#include "Mine.h"
+
+
 void Mine::ChangePlayerMoney(Player& player, int value) 
 {
     player.AddPlayerMoney(value);

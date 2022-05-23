@@ -15,6 +15,11 @@ int PickaxeBase::GetBuyPrice() const
 {
     return buyPrice;
 }
+
+std::string PickaxeBase::GetName() const
+{
+    return name;
+}
     
 void PickaxeBase::SetBuyPrice(int price)
 {

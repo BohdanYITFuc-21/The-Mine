@@ -1,21 +1,8 @@
 ﻿#include "SilverPickaxe.h"
 
-SilverPickaxe::SilverPickaxe()
+SilverPickaxe::SilverPickaxe() : PickaxeBase()
 {
-    baseDamage = 10;
     buyPrice = 100;
+    baseDamage = 10;
     name = "Silver Pickaxe";
-}
-int SilverPickaxe::GetBuyPrice() const
-{
-    return buyPrice;
-}
-int SilverPickaxe::GetDamage() const
-{
-    return baseDamage;
-}
-        
-void SilverPickaxe::SetBuyPrice(int price) 
-{
-    buyPrice = price;
 }

@@ -5,24 +5,22 @@
 #include "Player.h"
 #include <string>
 #include <iostream>
+#include <vector>
 
 class Shop
 {
 private:
-    CopperPickaxe copperPickaxe;
-    SilverPickaxe silverPickaxe;
-    GoldenPickaxe goldenPickaxe;
-    std::string pickaxes[3] = {copperPickaxe.name, silverPickaxe.name, goldenPickaxe.name};
+    std::vector<std::unique_ptr<PickaxeBase>> pickaxes;
     std::string number;
     std::string price;
-    static void ChangePlayerMoney(Player& player, int value);
-    static void ChangePlayerPickaxe(Player& player, int value);
+    static void ChangePlayerStats(Player& player, int value);
+    static void ChangePlayerStats(Player& player, int value, std::string name);
 public:
     Shop();
     static bool CheckNumber(std::string str);
+    static void BalanceCheck(Player& player);
     void PrintListOfItems() const;
     void PrintChoice(Player& player) ;
-    void BuyItem(Player& player, int itemID);
-    static void BalanceCheck(Player& player);
-    void SetDefault();
+    void BuyItem(Player& player, int itemID) const;
+    void SetDefault() const;
 };

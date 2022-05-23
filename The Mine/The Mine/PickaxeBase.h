@@ -12,4 +12,5 @@ public:
     int GetDamage() const;
     int GetBuyPrice() const;
     void SetBuyPrice(int price);
+    std::string GetName() const;
 };
